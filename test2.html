@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>
+        toggle_btn
+    </title>
+    <style>
+        
+        .switch {
+            opacity: 0;
+        }
+        .switch_btn {
+            width: 80px;
+            height: 40px;
+            background: lightgray;
+            position: relative;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .switch_btn:before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: orange;
+            position: absolute;
+            transition: all 0.5s ease-out;
+        }
+        
+        input[type=checkbox]:checked+.switch_btn:before {
+            margin-left: 40px;
+        }
+
+        input[type=checkbox]:checked+.switch_btn {
+            background: lightgreen;
+        }
+
+    </style>
+</head>
+
+<body>
+    <label class="switch">
+        <input type="checkbox">
+        <div class="switch_btn"></div>
+    </label>
+</body>
+
+</html>
